@@ -1,0 +1,71 @@
+FullNet(
+  (FP_model): CNN_net(
+    (conv_block1): Sequential(
+      (0): Conv1d(1, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv_block2): Sequential(
+      (0): Conv1d(64, 128, kernel_size=(5,), stride=(1,), padding=(2,))
+      (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv_block3): Sequential(
+      (0): Conv1d(128, 256, kernel_size=(7,), stride=(1,), padding=(3,))
+      (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (decoder): Sequential(
+      (0): Linear(in_features=262144, out_features=512, bias=True)
+      (1): Sigmoid()
+      (2): Linear(in_features=512, out_features=256, bias=True)
+      (3): Softmax(dim=0)
+    )
+  )
+  (GE_model): CNN_net(
+    (conv_block1): Sequential(
+      (0): Conv1d(1, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv_block2): Sequential(
+      (0): Conv1d(64, 128, kernel_size=(5,), stride=(1,), padding=(2,))
+      (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv_block3): Sequential(
+      (0): Conv1d(128, 256, kernel_size=(7,), stride=(1,), padding=(3,))
+      (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (decoder): Sequential(
+      (0): Linear(in_features=32768, out_features=512, bias=True)
+      (1): Sigmoid()
+      (2): Linear(in_features=512, out_features=256, bias=True)
+      (3): Softmax(dim=0)
+    )
+  )
+  (CB_model): CNN_net(
+    (conv_block1): Sequential(
+      (0): Conv1d(1, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv_block2): Sequential(
+      (0): Conv1d(64, 128, kernel_size=(5,), stride=(1,), padding=(2,))
+      (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv_block3): Sequential(
+      (0): Conv1d(128, 256, kernel_size=(7,), stride=(1,), padding=(3,))
+      (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+    (decoder): Sequential(
+      (0): Linear(in_features=131072, out_features=512, bias=True)
+      (1): Sigmoid()
+      (2): Linear(in_features=512, out_features=2, bias=True)
+      (3): Softmax(dim=0)
+    )
+  )
+) Accuracy 0.8661579943778326

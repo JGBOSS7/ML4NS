@@ -1,0 +1,41 @@
+FullNet(
+  (FP_model): FNN_net(
+    (fc1): Linear(in_features=1024, out_features=4056, bias=True)
+    (fc2): Linear(in_features=4056, out_features=2048, bias=True)
+    (fc3): Linear(in_features=2048, out_features=512, bias=True)
+    (dp): Dropout(p=0.2, inplace=False)
+    (decoder): Sequential(
+      (0): Linear(in_features=512, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=32, bias=True)
+      (3): Dropout(p=0.2, inplace=False)
+      (4): Linear(in_features=32, out_features=256, bias=True)
+    )
+  )
+  (GE_model): FNN_net(
+    (fc1): Linear(in_features=256, out_features=4056, bias=True)
+    (fc2): Linear(in_features=4056, out_features=2048, bias=True)
+    (fc3): Linear(in_features=2048, out_features=512, bias=True)
+    (dp): Dropout(p=0.2, inplace=False)
+    (decoder): Sequential(
+      (0): Linear(in_features=512, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=32, bias=True)
+      (3): Dropout(p=0.2, inplace=False)
+      (4): Linear(in_features=32, out_features=256, bias=True)
+    )
+  )
+  (CB_model): FNN_net(
+    (fc1): Linear(in_features=512, out_features=4056, bias=True)
+    (fc2): Linear(in_features=4056, out_features=2048, bias=True)
+    (fc3): Linear(in_features=2048, out_features=512, bias=True)
+    (dp): Dropout(p=0.2, inplace=False)
+    (decoder): Sequential(
+      (0): Linear(in_features=512, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=256, out_features=32, bias=True)
+      (3): Dropout(p=0.2, inplace=False)
+      (4): Linear(in_features=32, out_features=2, bias=True)
+    )
+  )
+) Accuracy 0.6601457174000345
